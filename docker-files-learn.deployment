@@ -1,4 +1,0 @@
-# Learn Docker practices
-
-FROM alberttgomes/docker.learn.repository:tagname
-
