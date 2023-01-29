@@ -5,5 +5,8 @@ RUN echo "Init build sql database image..."
 WORKDIR /docker-learn
 
 ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=[DATABASE_NAME]
+ENV MYSQL_USER=[USER_DATABASE]
+ENV MYSQL_PASSWORD=[PASSWORD_DATABASE]
 
 COPY ./database_dump.sql /docker-entrypoint-initdb.d/
