@@ -3,11 +3,14 @@ version: '3.8'
 services:
 
   database:
-    container_name: dump-database
-    image: dump-database
+    container_name: liferay-migrate-mysql
+    image: liferay-migrate-mysql
 
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=database-docker-learn
-      - MYSQL_USER=test
-      - MYSQL_PASSWORD=test
+      - MYSQL_DATABASE=lportal
+      - MYSQL_USER=lportal
+      - MYSQL_PASSWORD=1234
+
+    ports:
+      - "3307:3306"
