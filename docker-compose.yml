@@ -3,9 +3,11 @@ version: '3.8'
 services:
 
   database:
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
     container_name: dump-database
     image: dump-database
-
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=database-docker-learn
