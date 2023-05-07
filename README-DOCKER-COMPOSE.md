@@ -47,3 +47,7 @@
          ### Note
          Your values always the your services.
      - **restart**: Case some happen with the container the propertie *restart* with the value *always* will restarted the container automatically.
+     - **build**: Answerable for build a docker compose from a Dockerfile.
+          - The self docker compose is answaer for find the file dockerfile and build the same, but, if you rename your file for other, by example: `Dockerfile-application` you need add this flags above:
+             1. **context**: Where is your file directory.
+             2. **dockerfile**: Your dockerfile name.
