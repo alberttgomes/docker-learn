@@ -19,7 +19,7 @@
              
   ## Docker Compose Flags
   
-  Issues about docker compose Flags and usege
+  Issues about docker compose Flags and usage
    - This documentation explains some flags of docker compose to build and set configuration for a application.
      ### Flags:
      - **version**: Version of the docker compose that we are going to use. Usage:  ``version: "3.7"``
