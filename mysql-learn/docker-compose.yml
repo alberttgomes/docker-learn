@@ -11,3 +11,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=mysql-database-learn
+    volumes:   
+       - ./configs:/docker-entrypoint-initdb.d
+    restat: always
+   
