@@ -6,10 +6,8 @@ services:
     build:
       context: ./mysql
       dockerfile: Dockerfile
-    container_name: dump-database
-    image: dump-database
+    container_name: learn-mysql-with-dump
+    image: learn-docker-and-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=database-docker-learn
-      - MYSQL_USER=test
-      - MYSQL_PASSWORD=test
+      - MYSQL_DATABASE=mysql-database-learn
