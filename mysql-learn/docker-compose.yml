@@ -14,4 +14,3 @@ services:
     volumes:   
        - ./configs/Init.sql:/docker-entrypoint-initdb.d
     restart: always
-   
