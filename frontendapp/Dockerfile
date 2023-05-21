@@ -4,10 +4,8 @@ FROM node:18
 WORKDIR /app
 
 # Pre defined structure
-RUN mkdir -p /app/src/data && chmod +xwr /app/src/data \
-    mkdir -p /app/src/server  \
-    mkdir -p /app/src/component \
-    mkdir -p /app/src/pages
+RUN mkdir -p /app/src/data \
+    chmod +xwr /app/src/data 
 
 COPY ["package.json", "./"]
 
