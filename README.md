@@ -2,7 +2,7 @@
 
 Docker is an open platform for developing, shipping, and running applications. With Docker, you can manage your infrastructure in the same ways you manage your applications, reduce the delay between writing code and running it.
 
-For more details, see [Docker Overview]("https://docs.docker.com/get-started/overview/").
+For more details, see [Docker Overview](https://docs.docker.com/get-started/overview/).
 
 ## Importants topics about Docker
 
