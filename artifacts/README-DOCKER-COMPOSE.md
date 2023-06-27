@@ -1,6 +1,10 @@
 # Docker Compose Learn
 
  ## Docker Compose is a binary which possible the execute much container through one command.
+
+ The Compose Specification lets you define a platform-agnostic container based application. 
+ Computing components of an application are defined as _services_. A _service_ is an abstract concept implemented on platforms
+ by running the same container image, configuration one or more times.
  
  Docker Run Vs Docker Compose
   -  Docker run is necessary have some params, like port, name, volumes, variables of the environment between others.
