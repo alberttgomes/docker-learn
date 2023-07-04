@@ -1,15 +1,17 @@
 FROM liferay/dxp:latest
 
 ENV LIFERAY_WORKSPACE_ENVIRONMENT=local
-ENV BUNDLES_ENV=volumes/mnt/files/bundles
+ENV MOUNT_ENV=/mnt/liferay/files
 
-COPY --chown=liferay:liferay $BUNDLES_ENV/deploy /mnt/liferay/deploy
-COPY --chown=liferay:liferay $BUNDLES_ENV/osgi /mnt/liferay/osgi
+COPY --chown=liferay:liferay $MOUNT_ENV/deploy /mnt/liferay/deploy
+COPY --chown=liferay:liferay $MOUNT_ENV/osgi /mnt/liferay/osgi
+COPY --chown=liferay:liferay $MOUNT_ENV/*.properties /mnt/liferay/
 COPY --chown=liferay:liferay scripts /mnt/liferay/liferay/scripts
 COPY --chown=liferay:liferay configs /home/liferay/configs
-COPY --chown=liferay:liferay volumes/scripts/app-entrypoint.sh $LIFERAY_HOME
+COPY --chown=liferay:liferay scripts/app-entrypoint.sh $LIFERAY_HOME
 
-RUN chmod 777 app-entrypoint.sh
+RUN cd scripts \
+    chmod 777 app-entrypoint.sh
 
 USER liferay
 
